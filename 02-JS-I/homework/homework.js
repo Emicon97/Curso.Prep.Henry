@@ -1,13 +1,13 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const comida = 'tomate';
+const nuevaString = 'tomate';
 
 // Crea una variable numérica, puede ser cualquier número:
-const numero = 11555;
+const nuevoNum = 11555;
 
 // Crea una variable booleana:
-const soyTonto = 88==86;
+const nuevoBool = 88==86;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
