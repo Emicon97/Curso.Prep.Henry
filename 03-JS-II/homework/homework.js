@@ -133,17 +133,17 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   let mayor = Math.max(num1, num2, num3)
-  if (mayor === num1 && mayor > 0) {
-    return 'Número 1 es mayor y positivo'
-    }
   if (num1 < 0 || num2 < 0 || num3 < 0) {
     return 'Hay negativos'
   }
-  if (mayor === num3) {
-    return num3++
+  if (mayor === num1 && mayor > 0) {
+    return 'Número 1 es mayor y positivo'
   }
   if (num1 === 0 || num2 === 0 || num3 === 0) {
     return 'Error'
+  }
+  if (mayor === num3) {
+    return num3+1
   }
   return false
 }
@@ -155,7 +155,7 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   for (i=2; i<numero; i++) {
-    if (i%0) {
+    if (numero%i===0) {
       return true
     }
   }
@@ -177,7 +177,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   let tabla = [];
-  for (i=0; i<=60; i++) {
+  for (i=0; i<=10; i++) {
     tabla.push(i*6);
   }
   return tabla;
@@ -186,7 +186,8 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.length === 3) {
+  let num = numero.toString()
+  if (num.length == 3) {
     return true
   }
   return false
@@ -201,6 +202,7 @@ function doWhile(numero) {
     numero = numero+5
     sumas++
   } while (sumas<=8)
+  return numero
 }
 
 
