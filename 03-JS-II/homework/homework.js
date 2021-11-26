@@ -155,11 +155,11 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   for (i=2; i<numero; i++) {
-    if (numero%i!==0) {
-      return true
+    if (numero%i===0) {
+      return false
     }
   }
-  return false
+  return true
 }
 
 function esVerdadero(valor){
@@ -201,7 +201,7 @@ function doWhile(numero) {
   do {
     numero = numero+5
     sumas++
-  } while (sumas<=8)
+  } while (sumas<8)
   return numero
 }
 
